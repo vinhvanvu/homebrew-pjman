@@ -1,11 +1,11 @@
 # The Homebrew formula for pjman, written by the release (scripts/release.mjs) into the tap vinhvanvu/homebrew-pjman as
 # Formula/pjman.rb after each publish, from the package the release put on npm. Never edited by hand: the next release
-# overwrites it. 0.3.1 and e454a60cd1fc2b7df981c3c7bc82f15adfd8cf95002120e60c6d43359afc7b55 are filled in by the release.
+# overwrites it. 0.4.0 and f030b824ff444e37e3d5742f1f3976e34b0057867141636ef459c410f48513f4 are filled in by the release.
 class Pjman < Formula
   desc "Context graph for product development: changes, decisions, the product tree and agent sessions in git"
   homepage "https://github.com/vinhvanvu/pjman"
-  url "https://registry.npmjs.org/@vinhvanvu/pjman/-/pjman-0.3.1.tgz"
-  sha256 "e454a60cd1fc2b7df981c3c7bc82f15adfd8cf95002120e60c6d43359afc7b55"
+  url "https://registry.npmjs.org/@vinhvanvu/pjman/-/pjman-0.4.0.tgz"
+  sha256 "f030b824ff444e37e3d5742f1f3976e34b0057867141636ef459c410f48513f4"
   license "Apache-2.0"
 
   depends_on "node"
@@ -13,6 +13,14 @@ class Pjman < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
+  end
+
+  def caveats
+    <<~EOS
+      Run `pjman init` in a repository to set it up and install the Claude Code plugin.
+      After `brew upgrade pjman` the plugin refreshes itself at the next Claude Code session;
+      run `pjman migrate` when pjman asks for it.
+    EOS
   end
 
   test do
