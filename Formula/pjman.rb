@@ -1,11 +1,11 @@
 # The Homebrew formula for pjman, written by the release (scripts/release.mjs) into the tap vinhvanvu/homebrew-pjman as
 # Formula/pjman.rb after each publish, from the package the release put on npm. Never edited by hand: the next release
-# overwrites it. 0.8.0 and 5a0d0f93ba77f6b9d5705b7d853249586e1a6cb6448d8881e71f25a0b67bdf7a are filled in by the release.
+# overwrites it. 0.9.0 and 1b010f42d948f0393e85acbf5c9c6386b609397cef28652b05992077f651f533 are filled in by the release.
 class Pjman < Formula
   desc "Context graph for product development: changes, decisions, the product tree and agent sessions in git"
   homepage "https://github.com/vinhvanvu/pjman"
-  url "https://registry.npmjs.org/@vinhvanvu/pjman/-/pjman-0.8.0.tgz"
-  sha256 "5a0d0f93ba77f6b9d5705b7d853249586e1a6cb6448d8881e71f25a0b67bdf7a"
+  url "https://registry.npmjs.org/@vinhvanvu/pjman/-/pjman-0.9.0.tgz"
+  sha256 "1b010f42d948f0393e85acbf5c9c6386b609397cef28652b05992077f651f533"
   license "Apache-2.0"
 
   depends_on "node"
