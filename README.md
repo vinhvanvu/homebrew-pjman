@@ -4,11 +4,7 @@ The Homebrew tap for [pjman](https://github.com/vinhvanvu/pjman).
 
 **Every change, every decision, and why.**
 
-pjman is an opinionated framework for product development and project management, built on a context graph your agents keep and you steer.
-
-![The bridge on a busy afternoon: the day's writes on one timeline, and seven changes in motion grouped by what each needs from you: working now, stopped with the next step set, in review](https://raw.githubusercontent.com/vinhvanvu/pjman/main/assets/hero.png)
-
-pjman gives the work a fixed shape: what the product is, each unit of work with where it came from and what done means, every choice with its options and who accepted it, and the sessions that did it. The agents read that shape at the start of every session and write to it through one command. You read it, steer it and make the decisions. The store under it is a git repository of Markdown files on your machine.
+pjman keeps a record of your product work in a store: Markdown files in a git repository on your machine. The records link to each other, so the store is a graph. It holds the product map, each change with where it came from and what done means, every decision with its options and who accepted it, the sessions that did the work, and the files of code each capability is built from. Your agent reads the store at the start of each session and writes to it through the `pjman` command, so a new session starts from what earlier ones recorded. A local dashboard draws the same files.
 
 ## Install
 
@@ -18,7 +14,7 @@ brew install vinhvanvu/pjman/pjman
 cd <your-repo> && pjman init
 ```
 
-Homebrew brings its own Node. `pjman init` creates your store, registers the repository as a project, installs the Claude Code plugin when `claude` is on the PATH, and starts the dashboard. Then run `claude` in the repository: the session starts from the record. What `pjman init` prints and what the first session looks like are in the [Install](https://github.com/vinhvanvu/pjman#install) and [With Claude Code](https://github.com/vinhvanvu/pjman#with-claude-code) sections of pjman's README.
+Homebrew brings its own Node. `pjman init` creates your store, registers the repository as a project, installs the Claude Code plugin when `claude` is on the PATH, and starts the dashboard. What init asks and what the first session does are in [Set up a repository](https://github.com/vinhvanvu/pjman#set-up-a-repository) in pjman's README.
 
 In [cmux](https://cmux.com) the dashboard docks in a pane beside the session and follows it. In Claude Code's desktop app a follow window does the same. In any other terminal, `pjman open` brings the session's page up in your browser.
 
