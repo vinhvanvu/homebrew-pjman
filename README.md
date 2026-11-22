@@ -4,7 +4,7 @@ The Homebrew tap for [pjman](https://github.com/vinhvanvu/pjman).
 
 **Every change, every decision, and why.**
 
-pjman keeps a record of your product work in a store: Markdown files in a git repository on your machine. The records link to each other, so the store is a graph. It holds the product map, each change with where it came from and what done means, every decision with its options and who accepted it, the sessions that did the work, and the files of code each capability is built from. Your agent reads the store at the start of each session and writes to it through the `pjman` command, so a new session starts from what earlier ones recorded. A local dashboard draws the same files.
+pjman keeps a record of your product work in a store: Markdown files in a git repository on your machine. The records link to each other, so the store is a graph. It holds the product map, each change with where it came from and what done means, every decision with its options and who accepted it, the sessions that did the work, the files of code each capability is built from, and the people: the accounts they hold and their stakes in the map. Before you tag someone on a pull request, `pjman people` names who has a stake in what it changes. Your agent reads the store at the start of each session and writes to it through the `pjman` command, so a new session starts from what earlier ones recorded. A local dashboard draws the same files.
 
 ## Install
 
